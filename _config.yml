@@ -1,0 +1,43 @@
+title: Unintentionally Blank
+owner : "Joe Shields"
+description: The chronicle of my quest to build a secret lair full of space lasers.
+author:
+  name: Joe Shields
+  url: "https://ashishchaudhary.in/hacker-blog"
+  email: joedang100@gmail.com
+  github_username: Joedang
+
+rssLimit: 10
+
+# baseurl: "/blog" # the subpath of your site, e.g. /blog
+# url: "joedang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# paginate_path: /page/:num/
+# paginate: 3
+# permalink: /:title
+
+# not sure what this does yet:
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+future: true
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - makefile
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<article>
+  <img src="{{ site.url }}/{{ page.splash.src }}" alt="{{ page.splash.alt }}" title="{{ page.splash.alt }}">
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date: "%Y-%m-%d" }}</time>
+  {{ content }}
+</article>
