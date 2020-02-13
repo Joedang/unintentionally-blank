@@ -14,3 +14,5 @@ You're in the right place if you like:
 - prototyping and rapid manufacturing,
 - ramblings and musings,
 - and hating on zoomer software paradigms.
+
+If you're the good kind of weirdo, [shoot me an email](mailto:{{ site.author.email }}) and say hi. 😁

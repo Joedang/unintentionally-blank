@@ -1,2 +1,6 @@
+---
+#
+---
 User-agent: *
 Disallow: /contact.html
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

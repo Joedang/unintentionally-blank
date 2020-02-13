@@ -4,7 +4,7 @@ date: 2020-02-10
 layout: post
 oneLiner: "There's a significantly non-zero chance that this will be my only post."
 splash: 
-    src: img/beachSplash.jpg
+    src: /img/beachSplash.jpg
     alt: "an image I took in Seaside, OR back in 2011"
 ---
 
@@ -13,7 +13,7 @@ I'm starting a blog.
 
 This is mostly intended to be an open journal. 
 I don't really expect anyone to read this, but I'll be pleased if people do.
-If you are reading this, please send me an email and say hi!
+If you are reading this, please [send me an email](mailto:{{ site.author.email }}) and say hi!
 
 # Stuff That I Plan to Write About
 I expect I'll ramble about whatever project/idea I happen to be working on at

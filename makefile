@@ -1,6 +1,7 @@
 LESS=assets/less/style.less
 CSS=assets/style.css
-proofOpts=--allow-hash-href --assume-extension --empty-alt-ignore #--disable-external
+baseurl=unintentionally-blank
+proofOpts=--allow-hash-href --assume-extension --empty-alt-ignore --url-swap \/$(baseurl): #--disable-external
 proofFile=proofReport.txt
 posts=_posts/*
 

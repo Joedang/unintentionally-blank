@@ -3,14 +3,14 @@ owner : "Joe Shields"
 description: The chronicle of my quest to build a secret lair full of space lasers.
 author:
   name: Joe Shields
-  url: "https://ashishchaudhary.in/hacker-blog"
+  url: "https://joedang.github.io/"
   email: joedang100@gmail.com
   github_username: Joedang
 
-rssLimit: 10
+postLimit: 10
 
-# baseurl: "/blog" # the subpath of your site, e.g. /blog
-# url: "joedang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/unintentionally-blank" # the subpath of your site, e.g. /blog
+url: "joedang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # paginate_path: /page/:num/
 # paginate: 3
 # permalink: /:title
@@ -27,12 +27,13 @@ defaults:
 future: true
 markdown: kramdown
 plugins:
-  - jekyll-seo-tag
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
+  - jemoji
+  - jekyll-seo-tag
 
 exclude:
+  - .gitignore
+  - proofReport.txt
   - makefile
   - Gemfile
   - Gemfile.lock

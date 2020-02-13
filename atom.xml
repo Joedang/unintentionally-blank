@@ -13,14 +13,15 @@ layout: null
       <email>{{ site.author.email }}</email>
       <uri>{{ site.author.url }}</uri>
     </author>
-    {% for post in site.posts limit:site.rssLimit %}
+    {% assign posts = site.pages | where: "layout", "post" | sort: "date" | reverse %}
+    {% for post in posts limit: postLimit %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}/{{ post.url }}</link>
-        <link href="{{ site.url }}{{ post.url }}"/>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <description>{{ post.oneLiner | xml_escape }}</description>
+        <pubDate>{{ post.date | date: "%Y-%m-%d" }}</pubDate>
+        <link>{{ site.url }}{{ site.baseurl }}/{{ post.url }}</link>
+        <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
+        <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
       </item>
     {% endfor %}
   </channel>

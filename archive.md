@@ -18,10 +18,7 @@ title: Archive
 {% for post in posts %}
 {% assign postYear = post.date | date: "%Y" %}
 {% if postYear == year %}
-## [{{ post.title }}]({{ post.url }})
-{{ post.date }}  
-{{ post.oneLiner }}  
-![]({{ post.splash.src }})
+{% include postItem.md %}
 {% endif %}
 {% endfor %}
 {% endfor %}
