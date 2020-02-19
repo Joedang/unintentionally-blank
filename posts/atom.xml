@@ -2,26 +2,37 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}{{ site.baseurl }}">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
+    <language>en-us</language>
     <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    <link href="{{ site.url }}{{ site.baseurl }}/favicon.ico" rel="icon" type="image/x-icon" />
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/posts/atom.xml" rel="self" type="application/rss+xml" />
     <author>
       <name>{{ site.author.name }}</name>
       <email>{{ site.author.email }}</email>
       <uri>{{ site.author.url }}</uri>
     </author>
+    <image>
+        <title>{{ site.title }}</title>
+        <url>{{ site.url }}{{ site.baseurl }}/img/vindictiveMisterPeanut.jpg</url>
+        <link>{{ site.url }}</link>
+    </image>
     {% assign posts = site.pages | where: "layout", "post" | sort: "date" | reverse %}
     {% for post in posts limit: postLimit %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.oneLiner | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%Y-%m-%d" }}</pubDate>
-        <link>{{ site.url }}{{ site.baseurl }}/{{ post.url }}</link>
+        <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
         <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
         <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+        <description>
+            <![CDATA[<base href="{{ site.url }}{{ site.baseurl }}/posts">]]>
+            {{ post.oneLiner | xml_escape }}
+            {{ post.content | xml_escape }}
+        </description>
       </item>
     {% endfor %}
   </channel>

@@ -33,6 +33,7 @@ plugins:
 
 exclude:
   - .gitignore
+  - TODO.md
   - proofReport.txt
   - makefile
   - Gemfile

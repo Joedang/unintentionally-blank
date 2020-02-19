@@ -7,5 +7,7 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | replace: '//', '/' }}">
   
-  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> {% seo %}
+  <link href="{{ site.url }}{{ site.baseurl }}/posts/atom.xml" 
+  type="application/atom+xml" rel="alternate" title="{{ site.title }}" />
+  {% seo %}
 </head>
